@@ -1,7 +1,7 @@
 # Template file for 'xfburn'
 pkgname=xfburn
-version=0.4.3
-revision=2
+version=0.5.0
+revision=1
 build_style=gnu-configure
 configure_args="--enable-gstreamer --enable-dbus --disable-hal"
 hostmakedepends="intltool pkg-config"
@@ -11,9 +11,9 @@ depends="desktop-file-utils hicolor-icon-theme"
 short_desc="CD-burner application for the Xfce Desktop Environment"
 maintainer="Juan RP <xtraeme@gmail.com>"
 homepage="http://goodies.xfce.org/projects/applications/xfburn"
-license="GPL-2"
+license="GPL"
 distfiles="http://archive.se.xfce.org/src/apps/xfburn/0.4/xfburn-${version}.tar.bz2"
-checksum=c9993226f0f4e3dea3326ad320a01c165a7e1a485f07fa4a2583475a4e6eaafe
+checksum=def2ced9a74b5112e992149ce901f3a5a73f20d9
 
 pre_configure() {
 	sed -i '1 i#include <glib-object.h>' xfburn/xfburn-settings.h
